@@ -5,7 +5,7 @@
 
 	<groupId>eu.europa.ec.joinup.sd-dss</groupId>
 	<artifactId>sd-dss</artifactId>
-	<version>4.7.RC2</version>
+	<version>4.7.RC2-inqool</version>
 	<packaging>pom</packaging>
 	<name>Digital Signature Services</name>
 
@@ -105,7 +105,7 @@
 							<goal>test</goal>
 						</goals>
 						<configuration>
-							<skipTests>false</skipTests>
+							<skipTests>true</skipTests>
 							<testFailureIgnore>false</testFailureIgnore>
 							<includes>
 								<include>eu/**/*Test.java</include>
@@ -133,7 +133,7 @@
 							<goal>test</goal>
 						</goals>
 						<configuration>
-							<skipTests>false</skipTests>
+							<skipTests>true</skipTests>
 							<testFailureIgnore>true</testFailureIgnore>
 							<includes>
 								<include>plugtests/**/*Test.java</include>
@@ -147,7 +147,7 @@
 							<goal>test</goal>
 						</goals>
 						<configuration>
-							<skipTests>false</skipTests>
+							<skipTests>true</skipTests>
 							<testFailureIgnore>true</testFailureIgnore>
 							<includes>
 								<include>known/issues/**/*Test.java</include>
@@ -681,18 +681,23 @@
 	</repositories>
 
 	<distributionManagement>
+		<!--<repository>-->
+			<!--<id>joinup-nexus</id>-->
+			<!--<url>https://joinup.ec.europa.eu/nexus/content/repositories/releases/</url>-->
+		<!--</repository>-->
+		<!--<snapshotRepository>-->
+			<!--<id>joinup-nexus</id>-->
+			<!--<url>https://joinup.ec.europa.eu/nexus/content/repositories/snapshots</url>-->
+		<!--</snapshotRepository>-->
+		<!--<site>-->
+			<!--<id>joinup-site</id>-->
+			<!--<url>dav:https://joinup.ec.europa.eu/webdav/sd-dss/www</url>-->
+		<!--</site>-->
 		<repository>
-			<id>joinup-nexus</id>
-			<url>https://joinup.ec.europa.eu/nexus/content/repositories/releases/</url>
+			<id>nexus.inqool.cz</id>
+			<name>nexus.inqool.cz</name>
+			<url>http://nexus.inqool.cz/repository/maven-releases/</url>
 		</repository>
-		<snapshotRepository>
-			<id>joinup-nexus</id>
-			<url>https://joinup.ec.europa.eu/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
-		<site>
-			<id>joinup-site</id>
-			<url>dav:https://joinup.ec.europa.eu/webdav/sd-dss/www</url>
-		</site>
 	</distributionManagement>
 	
 	<issueManagement>
